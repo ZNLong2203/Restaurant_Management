@@ -18,7 +18,7 @@ public class InsertCustomer {
     public static void main(String[] args) {
         String connectionString = "mongodb+srv://o84267877:uRolj9Hf5boFwCBS@cluster0.huhiakh.mongodb.net/?retryWrites=true&w=majority";
 
-        // Create a new client and connect to the server
+        // Create a new client and connect to the server.server
         try (MongoClient mongoClient = MongoClients.create(connectionString)) {
             // Get the database
             MongoDatabase database = mongoClient.getDatabase("PTIT");
