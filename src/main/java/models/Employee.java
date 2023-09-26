@@ -1,18 +1,20 @@
+package models;
+
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import oop.EmployeeOOP;
 import org.bson.Document;
-import server.EmployeeOOP;
 
 
 public class Employee {
-    private MongoClient mongoClient;
-    private String databaseName;
-    private String collectionName;
-    public void UserDao() {
+    private final MongoClient mongoClient;
+    private final String databaseName;
+    private final String collectionName;
+    public Employee() {
         mongoClient = MongoClients.create("mongodb+srv://o84267877:uRolj9Hf5boFwCBS@cluster0.huhiakh.mongodb.net/?retryWrites=true&w=majority");
-        databaseName = String.valueOf(mongoClient.getDatabase("PTIT"));
+        databaseName = "PTIT";
         collectionName = "Employee";
     }
     // Create a new user
@@ -76,6 +78,7 @@ public class Employee {
             Document query = new Document("employee_id", id);
             collection.deleteOne(query);
         }
+        mongoClient.close();
     }
-}
 
+}
