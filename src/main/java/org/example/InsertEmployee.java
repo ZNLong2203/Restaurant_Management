@@ -1,6 +1,7 @@
 package org.example;
 //o84267877@gmail.com
 //qwert1234#
+
 import com.mongodb.client.*;
 import org.bson.Document;
 
@@ -31,7 +32,7 @@ public class InsertEmployee {
             System.out.println("2. Delete");
             System.out.println("3. Find");
             long n = sc.nextLong();
-            if(n==1) {
+            if (n == 1) {
                 // Create a list to store the records
                 List<Document> documents = new ArrayList<>();
                 // Read each line of the CSV file and parse it into a Document object
@@ -60,17 +61,15 @@ public class InsertEmployee {
                 }
                 // Insert the documents into the collection
                 collection2.insertMany(documents);
-            }
-            else if(n==2) {
+            } else if (n == 2) {
                 // Create a query filter
                 Document queryFilter = new Document();
                 queryFilter.put("name", "Long");
                 // Delete the document
                 collection2.deleteOne(queryFilter);
-            }
-            else if(n==3) {
+            } else if (n == 3) {
                 // Create a query filter
-                Document queryFilter = new Document();
+                Document queryFilter = new Document("name", "Tuan");
                 // Find the documents that match the query filter
                 MongoCursor<Document> cursor = collection2.find(queryFilter).iterator();
                 // Iterate over the documents and print them out
