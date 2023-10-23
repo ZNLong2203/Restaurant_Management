@@ -7,13 +7,17 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ResourceBundle;
 
 public class HelloController {
 
@@ -35,6 +39,9 @@ public class HelloController {
     private Connection connect;
     private PreparedStatement prepare;
     private ResultSet result;
+
+    private double x=0;
+    private double y=0;
 
     public void Login(){
         String sql="SELECT * FROM admin WHERE username = ? AND password = ?";
@@ -59,6 +66,8 @@ public class HelloController {
             }
             else{
                 if(result.next()){
+
+                    data.username=username.getText();
                     // Not really needed
                     alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Information Message");
@@ -73,6 +82,20 @@ public class HelloController {
 
                     Stage stage = new Stage();
                     Scene scene = new Scene(root);
+
+                    root.setOnMousePressed((MouseEvent event) ->
+                    {
+                        x=event.getSceneX();
+                        y=event.getSceneY();
+                    });
+
+                    root.setOnMouseDragged((MouseEvent event) ->
+                    {
+                        stage.setX(event.getSceneX()-x);
+                        stage.setY(event.getSceneY()-y);
+                    });
+
+                    stage.initStyle(StageStyle.TRANSPARENT);
 
                     stage.setScene(scene);
                     stage.show();
@@ -93,4 +116,7 @@ public class HelloController {
         System.exit(0);
     }
 
+    public void initiliaze(URL url, ResourceBundle rb){
+
+    }
 }
