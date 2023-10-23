@@ -26,8 +26,8 @@ public class HelloApplication extends Application {
         });
 
         root.setOnMouseDragged((MouseEvent event) ->{
-            stage.setX(event.getSceneX() - x);
-            stage.setY(event.getSceneY() - y);
+            stage.setX(event.getSceneX() + x);
+            stage.setY(event.getSceneY() + y);
 
             stage.setOpacity(1);
         });

@@ -15,9 +15,9 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.dashboardController">
    <children>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+      <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
          <children>
             <BorderPane layoutX="91.0" layoutY="100.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <top>
@@ -25,12 +25,12 @@
                      <children>
                         <AnchorPane prefHeight="35.0" prefWidth="1100.0" styleClass="top-form" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <Button layoutX="1048.0" layoutY="2.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="52.0" styleClass="close" stylesheets="@dashboardDesign.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                              <Button fx:id="close" layoutX="1048.0" layoutY="2.0" mnemonicParsing="false" onAction="#close" prefHeight="24.0" prefWidth="52.0" styleClass="close" stylesheets="@dashboardDesign.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
                                  <graphic>
                                     <FontAwesomeIcon glyphName="CLOSE" size="1.2em" />
                                  </graphic>
                               </Button>
-                              <Button layoutX="1011.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" styleClass="minimize" stylesheets="@dashboardDesign.css" />
+                              <Button fx:id="minimize" layoutX="1011.0" layoutY="2.0" mnemonicParsing="false" onAction="#minimize" prefHeight="25.0" prefWidth="35.0" styleClass="minimize" stylesheets="@dashboardDesign.css" />
                               <FontAwesomeIcon glyphName="MINUS" layoutX="1023.0" layoutY="19.0" size="1.2em" wrappingWidth="13.314285278320312" />
                               <Label layoutX="30.0" layoutY="14.0" text="Restaurant Managament System" AnchorPane.topAnchor="14.0">
                                  <font>
@@ -52,13 +52,11 @@
                               <String fx:value="shadow" />
                            </styleClass>
                            <children>
-                              <Button layoutX="18.0" layoutY="47.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Dashboard" />
                               <Button layoutX="18.0" layoutY="91.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Available Foods/Drinks" />
                               <Button layoutX="18.0" layoutY="136.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Order" />
-                              <Button layoutX="18.0" layoutY="180.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Customers" AnchorPane.topAnchor="180.0" />
                               <Button layoutX="14.0" layoutY="312.0" mnemonicParsing="false" styleClass="signout" stylesheets="@dashboardDesign.css">
                                  <graphic>
-                                    <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="2em" />
+                                    <FontAwesomeIcon fx:id="logout" fill="WHITE" glyphName="SIGN_OUT" size="2em" />
                                  </graphic>
                               </Button>
                               <Label layoutX="63.0" layoutY="319.0" text="Sign Out">
@@ -82,7 +80,7 @@
                                     <Font name="Tahoma" size="15.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="51.0" layoutY="129.0" prefHeight="24.0" prefWidth="156.0" text="Admin" textFill="WHITE">
+                              <Label fx:id="username" alignment="CENTER" layoutX="51.0" layoutY="129.0" prefHeight="24.0" prefWidth="156.0" text="dmasoda" textFill="WHITE">
                                  <font>
                                     <Font name="Arial Black" size="18.0" />
                                  </font>
@@ -100,7 +98,7 @@
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
                         <Separator layoutY="-3.0" orientation="VERTICAL" prefHeight="558.0" prefWidth="5.0" />
-                        <AnchorPane layoutX="66.0" layoutY="48.0" prefHeight="555.0" prefWidth="885.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="availableFD_form" layoutX="66.0" layoutY="48.0" prefHeight="555.0" prefWidth="885.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <AnchorPane layoutX="6.0" layoutY="10.0" prefHeight="536.0" prefWidth="287.0" stylesheets="@dashboardDesign.css">
                                  <styleClass>
@@ -113,13 +111,13 @@
                                           <Font name="Tahoma" size="12.0" />
                                        </font>
                                     </Label>
-                                    <TextField layoutX="99.0" layoutY="25.0" prefHeight="25.0" prefWidth="118.0" styleClass="textfield" stylesheets="@dashboardDesign.css" />
+                                    <TextField fx:id="availableFD_productID" layoutX="99.0" layoutY="25.0" prefHeight="25.0" prefWidth="118.0" styleClass="textfield" stylesheets="@dashboardDesign.css" />
                                     <Label layoutX="10.0" layoutY="71.0" prefHeight="23.0" prefWidth="80.0" text="Product Name:" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0">
                                        <font>
                                           <Font name="Tahoma" size="12.0" />
                                        </font>
                                     </Label>
-                                    <TextField layoutX="99.0" layoutY="70.0" prefHeight="25.0" prefWidth="179.0" styleClass="textfield" stylesheets="@dashboardDesign.css" />
+                                    <TextField fx:id="availableFD_productName" layoutX="99.0" layoutY="70.0" prefHeight="25.0" prefWidth="179.0" styleClass="textfield" stylesheets="@dashboardDesign.css" />
                                     <Label layoutX="57.0" layoutY="111.0" prefHeight="23.0" prefWidth="34.0" text="Type:" AnchorPane.leftAnchor="57.0" AnchorPane.rightAnchor="196.0">
                                        <font>
                                           <Font name="Tahoma" size="12.0" />
@@ -130,18 +128,18 @@
                                           <Font name="Tahoma" size="12.0" />
                                        </font>
                                     </Label>
-                                    <TextField layoutX="99.0" layoutY="151.0" prefHeight="25.0" prefWidth="179.0" promptText="\$0.0" styleClass="textfield" stylesheets="@dashboardDesign.css" />
-                                    <ComboBox layoutX="99.0" layoutY="110.0" prefHeight="25.0" prefWidth="179.0" promptText="Choose..." styleClass="textfield" stylesheets="@dashboardDesign.css" />
+                                    <TextField fx:id="availableFD_productPrice" layoutX="99.0" layoutY="151.0" prefHeight="25.0" prefWidth="179.0" promptText="\$0.0" styleClass="textfield" stylesheets="@dashboardDesign.css" />
+                                    <ComboBox fx:id="availableFD_productType" layoutX="99.0" layoutY="110.0" prefHeight="25.0" prefWidth="179.0" promptText="Choose..." styleClass="textfield" stylesheets="@dashboardDesign.css" />
                                     <Label layoutX="52.0" layoutY="202.0" prefHeight="23.0" prefWidth="44.0" text="Status:">
                                        <font>
                                           <Font name="Tahoma" size="12.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox layoutX="99.0" layoutY="201.0" prefHeight="25.0" prefWidth="179.0" promptText="Choose..." styleClass="textfield" stylesheets="@dashboardDesign.css" />
-                                    <Button layoutX="9.0" layoutY="293.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="87.0" styleClass="add-btn" stylesheets="@dashboardDesign.css" text="Add" />
-                                    <Button layoutX="158.0" layoutY="293.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="87.0" styleClass="update-btn" stylesheets="@dashboardDesign.css" text="Update" />
-                                    <Button layoutX="9.0" layoutY="355.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="87.0" styleClass="clear-btn" stylesheets="@dashboardDesign.css" text="Clear" />
-                                    <Button layoutX="158.0" layoutY="355.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="87.0" styleClass="delete-btn" stylesheets="@dashboardDesign.css" text="Delete" />
+                                    <ComboBox fx:id="availableFD_productStatus" layoutX="99.0" layoutY="201.0" prefHeight="25.0" prefWidth="179.0" promptText="Choose..." styleClass="textfield" stylesheets="@dashboardDesign.css" />
+                                    <Button fx:id="availableFD_addBtn" layoutX="9.0" layoutY="293.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="87.0" styleClass="add-btn" stylesheets="@dashboardDesign.css" text="Add" />
+                                    <Button fx:id="availableFD_updateBtn" layoutX="158.0" layoutY="293.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="87.0" styleClass="update-btn" stylesheets="@dashboardDesign.css" text="Update" />
+                                    <Button fx:id="availableFD_clearBtn" layoutX="9.0" layoutY="355.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="87.0" styleClass="clear-btn" stylesheets="@dashboardDesign.css" text="Clear" />
+                                    <Button fx:id="availableFD_deleteBtn" layoutX="158.0" layoutY="355.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="87.0" styleClass="delete-btn" stylesheets="@dashboardDesign.css" text="Delete" />
                                  </children>
                               </AnchorPane>
                               <AnchorPane layoutX="310.0" layoutY="10.0" prefHeight="536.0" prefWidth="559.0" stylesheets="@dashboardDesign.css">
@@ -150,15 +148,15 @@
                                     <String fx:value="shadow" />
                                  </styleClass>
                                  <children>
-                                    <TextField layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="264.0" promptText="Search" styleClass="search" stylesheets="@dashboardDesign.css" />
+                                    <TextField fx:id="availableFD_search" layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="264.0" promptText="Search" styleClass="search" stylesheets="@dashboardDesign.css" />
                                     <FontAwesomeIcon glyphName="SEARCH" layoutX="21.0" layoutY="35.0" selectionStart="0" size="1.5em" />
                                     <TableView layoutX="14.0" layoutY="68.0" prefHeight="462.0" prefWidth="534.0">
                                       <columns>
-                                        <TableColumn prefWidth="112.0" text="Product ID" />
-                                        <TableColumn prefWidth="197.0" text="Product Name" />
-                                          <TableColumn prefWidth="73.0" text="Type" />
-                                          <TableColumn prefWidth="79.0" text="Price($)" />
-                                          <TableColumn prefWidth="84.0" text="Status" />
+                                        <TableColumn fx:id="availableFD_col_productID" prefWidth="100.0" text="Product ID" />
+                                        <TableColumn fx:id="availableFD_col_productName" prefWidth="194.0" text="Product Name" />
+                                          <TableColumn fx:id="availableFD_col_type" prefWidth="88.0" text="Type" />
+                                          <TableColumn fx:id="availableFD_col_price" prefWidth="73.0" text="Price($)" />
+                                          <TableColumn fx:id="availableFD_col_status" prefWidth="90.0" text="Status" />
                                       </columns>
                                     </TableView>
                                  </children>
@@ -166,7 +164,7 @@
                               <Separator layoutX="299.0" layoutY="14.0" orientation="VERTICAL" prefHeight="534.0" prefWidth="5.0" />
                            </children>
                         </AnchorPane>
-                        <AnchorPane layoutX="48.0" layoutY="52.0" prefHeight="555.0" prefWidth="883.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="order_form" layoutX="48.0" layoutY="52.0" prefHeight="555.0" prefWidth="883.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <AnchorPane layoutX="14.0" layoutY="8.0" prefHeight="539.0" prefWidth="520.0" stylesheets="@dashboardDesign.css">
                                  <styleClass>
@@ -174,13 +172,13 @@
                                     <String fx:value="shadow" />
                                  </styleClass>
                                  <children>
-                                    <TableView layoutX="14.0" layoutY="14.0" prefHeight="522.0" prefWidth="496.0">
+                                    <TableView fx:id="order_tableView" layoutX="14.0" layoutY="14.0" prefHeight="522.0" prefWidth="496.0">
                                       <columns>
-                                        <TableColumn prefWidth="79.0" text="Product ID" />
-                                        <TableColumn prefWidth="161.0" text="Product Name" />
-                                          <TableColumn prefWidth="83.0" text="Type" />
-                                          <TableColumn prefWidth="86.0" text="Price($)" />
-                                          <TableColumn prefWidth="85.0" text="Quantity" />
+                                        <TableColumn fx:id="order_col_productID" prefWidth="79.0" text="Product ID" />
+                                        <TableColumn fx:id="order_col_productName" prefWidth="161.0" text="Product Name" />
+                                          <TableColumn fx:id="order_col_type" prefWidth="83.0" text="Type" />
+                                          <TableColumn fx:id="order_col_price" prefWidth="86.0" text="Price($)" />
+                                          <TableColumn fx:id="order_col_quantity" prefWidth="85.0" text="Quantity" />
                                       </columns>
                                     </TableView>
                                  </children>
@@ -191,8 +189,8 @@
                                     <String fx:value="shadow" />
                                  </styleClass>
                                  <children>
-                                    <ComboBox layoutX="147.0" layoutY="24.0" prefHeight="25.0" prefWidth="160.0" promptText="Choose..." styleClass="textfield" stylesheets="@dashboardDesign.css" />
-                                    <ComboBox layoutX="147.0" layoutY="72.0" prefHeight="25.0" prefWidth="160.0" promptText="Choose..." styleClass="textfield" stylesheets="@dashboardDesign.css" />
+                                    <ComboBox fx:id="orderProductID" layoutX="147.0" layoutY="24.0" prefHeight="25.0" prefWidth="160.0" promptText="Choose..." styleClass="textfield" stylesheets="@dashboardDesign.css" />
+                                    <ComboBox fx:id="orderProductName" layoutX="147.0" layoutY="72.0" prefHeight="25.0" prefWidth="160.0" promptText="Choose..." styleClass="textfield" stylesheets="@dashboardDesign.css" />
                                     <Label layoutX="44.0" layoutY="28.0" text="Product ID:">
                                        <font>
                                           <Font name="Tahoma" size="14.0" />
@@ -203,19 +201,19 @@
                                           <Font name="Tahoma" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Spinner layoutX="147.0" layoutY="120.0" prefHeight="25.0" prefWidth="103.0" styleClass="textfield" stylesheets="@dashboardDesign.css" />
+                                    <Spinner fx:id="order_quantity" layoutX="147.0" layoutY="120.0" prefHeight="25.0" prefWidth="103.0" styleClass="textfield" stylesheets="@dashboardDesign.css" />
                                     <Label layoutX="58.0" layoutY="124.0" text="Quantity:">
                                        <font>
                                           <Font name="Tahoma" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Button layoutX="205.0" layoutY="195.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="91.0" styleClass="add-btn" stylesheets="@dashboardDesign.css" text="Add" />
+                                    <Button fx:id="order_addBtn" layoutX="205.0" layoutY="195.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="91.0" styleClass="add-btn" stylesheets="@dashboardDesign.css" text="Add" />
                                     <Label layoutX="98.0" layoutY="262.0" prefHeight="22.0" prefWidth="36.0" text="Total:">
                                        <font>
                                           <Font name="Tahoma" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="149.0" layoutY="261.0" prefHeight="24.0" prefWidth="152.0" text="\$0.0">
+                                    <Label fx:id="order_total" layoutX="149.0" layoutY="261.0" prefHeight="24.0" prefWidth="152.0" text="\$0.0">
                                        <font>
                                           <Font name="Arial" size="18.0" />
                                        </font>
@@ -225,10 +223,10 @@
                                           <Font name="Tahoma" size="14.0" />
                                        </font>
                                     </Label>
-                                    <TextField layoutX="151.0" layoutY="299.0" promptText="\$0.0" styleClass="textfield" stylesheets="@dashboardDesign.css" />
-                                    <Button layoutX="35.0" layoutY="380.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="91.0" styleClass="add-btn" stylesheets="@dashboardDesign.css" text="Pay" />
-                                    <Button layoutX="205.0" layoutY="380.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="91.0" styleClass="update-btn" stylesheets="@dashboardDesign.css" text="Receipt" />
-                                    <Button layoutX="35.0" layoutY="456.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="91.0" styleClass="delete-btn" stylesheets="@dashboardDesign.css" text="Remove" />
+                                    <TextField fx:id="order_amount" layoutX="151.0" layoutY="299.0" promptText="\$0.0" styleClass="textfield" stylesheets="@dashboardDesign.css" />
+                                    <Button fx:id="order_payBtn" layoutX="35.0" layoutY="380.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="91.0" styleClass="add-btn" stylesheets="@dashboardDesign.css" text="Pay" />
+                                    <Button fx:id="order_receiptBtn" layoutX="205.0" layoutY="380.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="91.0" styleClass="update-btn" stylesheets="@dashboardDesign.css" text="Receipt" />
+                                    <Button fx:id="order_removeBtn" layoutX="35.0" layoutY="456.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="91.0" styleClass="delete-btn" stylesheets="@dashboardDesign.css" text="Remove" />
                                  </children>
                               </AnchorPane>
                               <Separator layoutX="542.0" layoutY="14.0" orientation="VERTICAL" prefHeight="537.0" prefWidth="8.0" />
