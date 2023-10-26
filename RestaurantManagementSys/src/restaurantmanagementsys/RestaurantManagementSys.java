@@ -8,6 +8,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.util.Objects;
+
 public class RestaurantManagementSys extends Application {
     
     private double x = 0;
@@ -15,7 +17,7 @@ public class RestaurantManagementSys extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FXMLDocument.fxml")));
         
         Scene scene = new Scene(root);
         
