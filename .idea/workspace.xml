@@ -5,13 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca04efe3-da20-4898-b23a-c8f0e72a9c1f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/src/restaurantmanagementsys/RestaurantManagementSys.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/src/restaurantmanagementsys/RestaurantManagementSys.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/built-jar.properties" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/build/built-jar.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/FXMLDocumentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/FXMLDocumentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/RestaurantManagementSys.class" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/RestaurantManagementSys.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/categories.class" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/categories.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/dashboardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/dashboardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/dashboardDesign.css" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/dashboardDesign.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/data.class" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/data.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/database.class" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/database.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/loginDesign.css" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/loginDesign.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/product.class" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/report.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/report.jrxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/nbproject/project.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSystemProject.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,14 +43,16 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "tuan",
-    "last_opened_file_path": "D:/documents/code/git/lib/stax-api-1.0.1.jar",
+    "last_opened_file_path": "D:/documents/code/git/Restaurant_Management/lib/stax-api-1.0.1.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "spring.configuration.checksum": "d41d8cd98f00b204e9800998ecf8427e",
     "vue.rearranger.settings.migration": "true"
   }
@@ -68,7 +78,8 @@
       <updated>1698295130814</updated>
       <workItem from="1698295131866" duration="147000" />
       <workItem from="1698314686846" duration="40000" />
-      <workItem from="1698314743677" duration="431000" />
+      <workItem from="1698314743677" duration="626000" />
+      <workItem from="1699581445678" duration="1863000" />
     </task>
     <servers />
   </component>
