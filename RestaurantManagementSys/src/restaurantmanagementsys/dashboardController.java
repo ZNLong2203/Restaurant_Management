@@ -737,7 +737,6 @@ public class dashboardController implements Initializable {
 
     private double amount;
 
-//    int cnt = 1;
     public void orderPay() {
         orderCustomerId();
         orderTotal();
@@ -909,7 +908,7 @@ public class dashboardController implements Initializable {
                 alert.showAndWait();
             } else {
 
-                JasperDesign jDesign = JRXmlLoader.load("D:\\Dowloads\\Restaurant_Management-tuan\\RestaurantManagementSys\\src\\restaurantmanagementsys\\report.jrxml");
+                JasperDesign jDesign = JRXmlLoader.load("D:\\documents\\code\\git\\Restaurant_Management\\RestaurantManagementSys\\src\\restaurantmanagementsys\\report.jrxml");
                 JasperReport jReport = JasperCompileManager.compileReport(jDesign);
                 JasperPrint jPrint = JasperFillManager.fillReport(jReport, hash, connect);
 
