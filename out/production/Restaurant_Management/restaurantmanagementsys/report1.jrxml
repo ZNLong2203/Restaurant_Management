@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" pageWidth="229" pageHeight="425" columnWidth="189" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6cd89999-4c8f-4521-9c39-7b1a696526f4">
 	<property name="ireport.zoom" value="3.305785123966942"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="144"/>
 	<parameter name="data_parameter" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
@@ -88,14 +88,14 @@ WHERE
 	<columnHeader>
 		<band height="33" splitType="Stretch">
 			<staticText>
-				<reportElement x="10" y="9" width="57" height="20" uuid="ee6dbe31-ab02-4069-b176-014a8918757a"/>
+				<reportElement x="10" y="9" width="68" height="20" uuid="ee6dbe31-ab02-4069-b176-014a8918757a"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[Product Name]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="67" y="9" width="57" height="20" uuid="dad45816-30b4-4168-9498-9589aa1b9b13"/>
+				<reportElement x="78" y="9" width="46" height="20" uuid="dad45816-30b4-4168-9498-9589aa1b9b13"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true" isItalic="false"/>
 				</textElement>
@@ -122,14 +122,14 @@ WHERE
 	<detail>
 		<band height="37" splitType="Stretch">
 			<textField>
-				<reportElement x="11" y="0" width="56" height="21" uuid="bcc398e5-9647-4471-9d59-f8f70440594e"/>
+				<reportElement x="11" y="0" width="67" height="21" uuid="bcc398e5-9647-4471-9d59-f8f70440594e"/>
 				<textElement textAlignment="Center">
 					<font size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{product_product_name}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="67" y="1" width="57" height="20" uuid="41149b7e-579f-4b87-a62c-062c4bed2a18"/>
+				<reportElement x="78" y="1" width="46" height="20" uuid="41149b7e-579f-4b87-a62c-062c4bed2a18"/>
 				<textElement textAlignment="Center">
 					<font size="7"/>
 				</textElement>
