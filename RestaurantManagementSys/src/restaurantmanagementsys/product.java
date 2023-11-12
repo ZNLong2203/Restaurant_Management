@@ -1,13 +1,17 @@
 package restaurantmanagementsys;
 
+import oracle.sql.DATE;
+
 public class product {
     
     private Integer id;
+    private String customerId;
     private String productId;
     private String name;
     private String type;
     private Double price;
     private Integer quantity;
+    private java.sql.Date date;
     
     public product(Integer id, String productId, String name, String type, Double price, Integer quantity){
         this.id = id;
@@ -20,6 +24,9 @@ public class product {
     
     public Integer getId(){
         return id;
+    }
+    public String getCustomerId(){
+        return customerId;
     }
     public String getProductId(){
         return productId;
@@ -36,5 +43,7 @@ public class product {
     public Integer getQuantity(){
         return quantity;
     }
-    
+    public java.sql.Date getDate(){
+        return date;
+    }
 }

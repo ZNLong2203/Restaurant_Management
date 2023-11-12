@@ -1,5 +1,9 @@
 package restaurantmanagementsys;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.URL;
 import java.sql.*;
 //import java.sql.Date;
@@ -35,10 +39,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import net.sf.jasperreports.engine.JasperCompileManager;
-import net.sf.jasperreports.engine.JasperFillManager;
-import net.sf.jasperreports.engine.JasperPrint;
-import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
 import net.sf.jasperreports.view.JasperViewer;
@@ -332,6 +333,7 @@ public class dashboardController implements Initializable {
         connect = database.connectDb();
 
         try {
+            assert connect != null;
             prepare = connect.prepareStatement(sql);
             prepare.setString(1, availableFD_productID.getText());
             prepare.setString(2, availableFD_productName.getText());
@@ -343,9 +345,9 @@ public class dashboardController implements Initializable {
 
             if (availableFD_productID.getText().isEmpty()
                     || availableFD_productName.getText().isEmpty()
-                    || availableFD_productType.getSelectionModel() == null
+                    || availableFD_productType.getSelectionModel().getSelectedItem() == null
                     || availableFD_productPrice.getText().isEmpty()
-                    || availableFD_productStatus.getSelectionModel() == null) {
+                    || availableFD_productStatus.getSelectionModel().getSelectedItem() == null) {
 
                 alert = new Alert(AlertType.ERROR);
                 alert.setTitle("Error Message");
@@ -571,7 +573,7 @@ public class dashboardController implements Initializable {
 
                 String searchKey = newValue.toLowerCase();
 
-                if (predicateCategories.getProductId().toLowerCase().contains(searchKey)) {
+                if (predicateCategories.getProductId().contains(newValue) || predicateCategories.getProductId().equals(newValue)) {
                     return true;
                 } else if (predicateCategories.getName().toLowerCase().contains(searchKey)) {
                     return true;
@@ -579,11 +581,7 @@ public class dashboardController implements Initializable {
                     return true;
                 } else if (predicateCategories.getPrice().toString().contains(searchKey)) {
                     return true;
-                } else if (predicateCategories.getStatus().toLowerCase().contains(searchKey)) {
-                    return true;
-                } else {
-                    return false;
-                }
+                } else return predicateCategories.getStatus().toLowerCase().contains(searchKey);
             });
         });
 
@@ -750,8 +748,8 @@ public class dashboardController implements Initializable {
 
             Alert alert;
 
-            if (((balance < 0 || String.valueOf(balance).isEmpty())
-                    && (order_amount.getText().isEmpty() || String.valueOf(amount).isEmpty() || amount <= 0))
+            if ((balance < 0 || String.valueOf(balance).isEmpty())
+                    || (order_amount.getText().isEmpty() || String.valueOf(amount).isEmpty() || amount <= 0)
                     || totalP == 0 || String.valueOf(totalP).equals("$0.0") || String.valueOf(totalP).isEmpty()) {
                 alert = new Alert(AlertType.ERROR);
                 alert.setTitle("Error Message");
@@ -895,8 +893,9 @@ public class dashboardController implements Initializable {
 
         HashMap hash = new HashMap();
         orderCustomerId();
+        int idCus = customerId-1;
 
-        hash.put("data_parameter", customerId);
+        hash.put("data_parameter", idCus);
 
         try {
             Alert alert;
@@ -907,13 +906,13 @@ public class dashboardController implements Initializable {
                 alert.setContentText("Invalid total");
                 alert.showAndWait();
             } else {
-
-                JasperDesign jDesign = JRXmlLoader.load("D:\\documents\\code\\git\\Restaurant_Management\\RestaurantManagementSys\\src\\restaurantmanagementsys\\report.jrxml");
+                InputStream input = new FileInputStream(new java.io.File("D:\\documents\\code\\git\\Restaurant_Management\\RestaurantManagementSys\\src\\restaurantmanagementsys\\report1.jrxml"));
+                JasperDesign jDesign = JRXmlLoader.load(input);
                 JasperReport jReport = JasperCompileManager.compileReport(jDesign);
+                connect = database.connectDb();
                 JasperPrint jPrint = JasperFillManager.fillReport(jReport, hash, connect);
 
                 JasperViewer.viewReport(jPrint, false);
-
                 order_total.setText("$0.0");
                 order_balance.setText("$0.0");
                 order_amount.setText("");
