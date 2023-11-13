@@ -1,6 +1,4 @@
-package restaurantmanagementsys;
-
-import oracle.sql.DATE;
+package model;
 
 public class product {
     

@@ -1,4 +1,4 @@
-package restaurantmanagementsys;
+package model;
 public class categories {
     
     private String productId;

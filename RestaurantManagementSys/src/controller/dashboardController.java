@@ -1,9 +1,7 @@
-package restaurantmanagementsys;
+package controller;
 
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.net.URL;
 import java.sql.*;
 //import java.sql.Date;
@@ -39,10 +37,15 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import model.categories;
+import model.data;
+import model.product;
+import model.product_info;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
 import net.sf.jasperreports.view.JasperViewer;
+import utils.database;
 
 public class dashboardController implements Initializable {
 
@@ -122,7 +125,7 @@ public class dashboardController implements Initializable {
     private TextField availableFD_search;
 
     @FXML
-    private TableView<categories> availableFD_tableView;
+    private TableView<model.categories> availableFD_tableView;
 
     @FXML
     private TableColumn<categories, String> availableFD_col_productID;
@@ -269,23 +272,36 @@ public class dashboardController implements Initializable {
 
     }
 
+//    sort by date that have format of yyyy-mm-dd
+    public ArrayList<product_info> sortDate(ArrayList<product_info> list) {
+        list.sort(Comparator.comparing(product_info::getDate));
+        return list;
+    }
+
     public void dashboardNOCCChart() {
 
         try {
 
             dashboard_NOCChart.getData().clear();
 
-            String sql = "SELECT date, COUNT(id) FROM product_info GROUP BY date ORDER BY TIMESTAMP(date) ASC LIMIT 5";
+            String sql = "SELECT date, COUNT(id) FROM product_info GROUP BY date ORDER BY TIMESTAMP(date) DESC LIMIT 5";
 
             connect = database.connectDb();
 
             XYChart.Series chart = new XYChart.Series();
 
+            ArrayList<product_info> list = new ArrayList<>();
             prepare = connect.prepareStatement(sql);
             result = prepare.executeQuery();
 
             while (result.next()) {
-                chart.getData().add(new XYChart.Data(result.getString(1), result.getInt(2)));
+                product_info prodIF = new product_info(result.getInt(2), result.getDate(1));
+                list.add(prodIF);
+            }
+            sortDate(list);
+
+            for(product_info prodIF : list){
+                chart.getData().add(new XYChart.Data(prodIF.getDate().toString(), prodIF.getNumId()));
             }
 
             dashboard_NOCChart.getData().add(chart);
@@ -300,7 +316,7 @@ public class dashboardController implements Initializable {
 
         dashboard_ICChart.getData().clear();
 
-        String sql = "SELECT date, SUM(total) FROM product_info GROUP BY date ORDER BY TIMESTAMP(date) ASC LIMIT 7";
+        String sql = "SELECT date, SUM(total) FROM product_info GROUP BY date ORDER BY TIMESTAMP(date) DESC LIMIT 7";
 
         connect = database.connectDb();
 
@@ -310,11 +326,14 @@ public class dashboardController implements Initializable {
 
             prepare = connect.prepareStatement(sql);
             result = prepare.executeQuery();
-
+            ArrayList<product_info> list = new ArrayList<>();
             while (result.next()) {
-
-                chart.getData().add(new XYChart.Data(result.getString(1), result.getDouble(2)));
-
+                product_info prodIF = new product_info(result.getDouble(2), result.getDate(1));
+                list.add(prodIF);
+            }
+            sortDate(list);
+            for(product_info prodIF : list){
+                chart.getData().add(new XYChart.Data(prodIF.getDate().toString(), prodIF.getTotal()));
             }
 
             dashboard_ICChart.getData().add(chart);
@@ -619,7 +638,29 @@ public class dashboardController implements Initializable {
 
         availableFD_productID.setText(catData.getProductId());
         availableFD_productName.setText(catData.getName());
+        String typeSelect = catData.getType();
+        int index = 0;
+        switch (typeSelect) {
+            case "Meals":
+                index = 0;
+                break;
+            case "Drinks":
+                index = 1;
+                break;
+        }
+        availableFD_productType.getSelectionModel().select(index);
         availableFD_productPrice.setText(String.valueOf(catData.getPrice()));
+        String statusSelect = catData.getStatus();
+        int index2 = 0;
+        switch (statusSelect) {
+            case "Available":
+                index2 = 0;
+                break;
+            case "Not Available":
+                index2 = 1;
+                break;
+        }
+        availableFD_productStatus.getSelectionModel().select(index2);
 
     }
 
@@ -725,6 +766,9 @@ public class dashboardController implements Initializable {
 
                 orderDisplayTotal();
                 orderDisplayData();
+                order_productID.getSelectionModel().clearSelection();
+                order_productName.getSelectionModel().clearSelection();
+                orderSpinner();
             }
 
         } catch (Exception e) {
@@ -906,7 +950,7 @@ public class dashboardController implements Initializable {
                 alert.setContentText("Invalid total");
                 alert.showAndWait();
             } else {
-                InputStream input = new FileInputStream(new java.io.File("D:\\documents\\code\\git\\Restaurant_Management\\RestaurantManagementSys\\src\\restaurantmanagementsys\\report1.jrxml"));
+                InputStream input = new FileInputStream(new java.io.File("D:\\documents\\code\\git\\Restaurant_Management\\RestaurantManagementSys\\src\\report\\report1.jrxml"));
                 JasperDesign jDesign = JRXmlLoader.load(input);
                 JasperReport jReport = JasperCompileManager.compileReport(jDesign);
                 connect = database.connectDb();
@@ -1171,7 +1215,7 @@ public class dashboardController implements Initializable {
                 logout.getScene().getWindow().hide();
 
                 // LINK YOUR LOGIN FORM
-                Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("../view/FXMLDocument.fxml"));
                 Stage stage = new Stage();
                 Scene scene = new Scene(root);
 
