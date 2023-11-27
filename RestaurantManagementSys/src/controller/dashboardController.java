@@ -38,7 +38,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import model.categories;
-import model.data;
+import model.admin;
 import model.product;
 import model.product_info;
 import net.sf.jasperreports.engine.*;
@@ -1249,7 +1249,7 @@ public class dashboardController implements Initializable {
     }
 
     public void displayUsername() {
-        String user = data.username;
+        String user = admin.username;
         user = user.substring(0, 1).toUpperCase() + user.substring(1);
         username.setText(user);
     }

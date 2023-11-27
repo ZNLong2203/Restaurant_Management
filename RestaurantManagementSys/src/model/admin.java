@@ -1,13 +1,13 @@
 package model;
 
-public class data {
+public class admin {
     public int id;
     public static String username;
     public String password;
 
-    public data(int id, String username, String password){
+    public admin(int id, String username, String password){
         this.id = id;
-        data.username = username;
+        admin.username = username;
         this.password = password;
     }
 

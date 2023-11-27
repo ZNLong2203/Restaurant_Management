@@ -5,45 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca04efe3-da20-4898-b23a-c8f0e72a9c1f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RestaurantManagementSys/src/model/product_info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0b7c7d9c-cf4f-461c-82c4-f6ea8c49616b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0b7c7d9c-cf4f-461c-82c4-f6ea8c49616b.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0b7c7d9c-cf4f-461c-82c4-f6ea8c49616b/storage_v2/_src_/schema/restaurant.PUtalg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0b7c7d9c-cf4f-461c-82c4-f6ea8c49616b/storage_v2/_src_/schema/restaurant.PUtalg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/FXMLDocument.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/FXMLDocument.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/nbproject/UPDATED.TXT" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/nbproject/UPDATED.TXT" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/nbproject/build-impl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/nbproject/build-impl.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/built-jar.properties" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/build/built-jar.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/FXMLDocument.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/FXMLDocumentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/RestaurantManagementSys.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/categories.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/dashboard.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/dashboardController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/dashboardDesign.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/data.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/database.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/loginDesign.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/report.jasper" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/build/classes/restaurantmanagementsys/report.jrxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/nbproject/private/private.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/nbproject/project.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/production/RestaurantManagementSystemProject/restaurantmanagementsys/FXMLDocument.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/production/RestaurantManagementSystemProject/restaurantmanagementsys/FXMLDocument.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/production/RestaurantManagementSystemProject/restaurantmanagementsys/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/production/RestaurantManagementSystemProject/restaurantmanagementsys/dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/src/restaurantmanagementsys/FXMLDocument.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/src/view/FXMLDocument.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/src/restaurantmanagementsys/FXMLDocumentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/src/controller/FXMLDocumentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/src/restaurantmanagementsys/RestaurantManagementSys.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/src/RestaurantManagementSys.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/src/restaurantmanagementsys/categories.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/src/model/categories.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/src/restaurantmanagementsys/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/src/view/dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/src/restaurantmanagementsys/dashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/src/controller/dashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/src/restaurantmanagementsys/dashboardDesign.css" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/src/public/css/dashboardDesign.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/src/restaurantmanagementsys/data.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/src/model/data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/src/restaurantmanagementsys/database.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/src/utils/database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/src/restaurantmanagementsys/loginDesign.css" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/src/public/css/loginDesign.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/src/restaurantmanagementsys/product.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/src/model/product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/src/restaurantmanagementsys/report1.jasper" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/src/report/report1.jasper" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/src/restaurantmanagementsys/report1.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/src/report/report1.jrxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Restaurant_Management/restaurantmanagementsys/FXMLDocument.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Restaurant_Management/restaurantmanagementsys/FXMLDocumentController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Restaurant_Management/restaurantmanagementsys/RestaurantManagementSys.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Restaurant_Management/restaurantmanagementsys/categories.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Restaurant_Management/restaurantmanagementsys/dashboard.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Restaurant_Management/restaurantmanagementsys/dashboardController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Restaurant_Management/restaurantmanagementsys/dashboardDesign.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Restaurant_Management/restaurantmanagementsys/data.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Restaurant_Management/restaurantmanagementsys/database.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Restaurant_Management/restaurantmanagementsys/loginDesign.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Restaurant_Management/restaurantmanagementsys/product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Restaurant_Management/restaurantmanagementsys/report1.jasper" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Restaurant_Management/restaurantmanagementsys/report1.jrxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/src/controller/FXMLDocumentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/src/controller/FXMLDocumentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/src/controller/dashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/src/controller/dashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantManagementSys/src/model/data.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantManagementSys/src/model/admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Restaurant_Management/controller/FXMLDocumentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Restaurant_Management/controller/FXMLDocumentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Restaurant_Management/controller/dashboardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Restaurant_Management/controller/dashboardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Restaurant_Management/model/data.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +59,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;tuan&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/documents/code/git/RestaurantManagementSystemProject/RestaurantManagementSys&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/documents/code/git/Java&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -133,7 +117,15 @@
       <workItem from="1699757858811" duration="744000" />
       <workItem from="1699764559038" duration="9699000" />
       <workItem from="1699847294592" duration="2110000" />
-      <workItem from="1699860836436" duration="7287000" />
+      <workItem from="1699860836436" duration="7513000" />
+      <workItem from="1699930581568" duration="744000" />
+      <workItem from="1699949017399" duration="1205000" />
+      <workItem from="1700639450026" duration="81000" />
+      <workItem from="1700639580458" duration="1144000" />
+      <workItem from="1700643892794" duration="124000" />
+      <workItem from="1700703761069" duration="49000" />
+      <workItem from="1700805539612" duration="748000" />
+      <workItem from="1700994566574" duration="609000" />
     </task>
     <servers />
   </component>

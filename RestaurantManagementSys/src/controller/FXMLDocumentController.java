@@ -21,7 +21,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import model.data;
+import model.admin;
 import utils.database;
 
 public class FXMLDocumentController implements Initializable {
@@ -74,7 +74,7 @@ public class FXMLDocumentController implements Initializable {
             }else{
                 if(result.next()){
                     
-                    data.username = username.getText();
+                    admin.username = username.getText();
                     
                     alert = new Alert(AlertType.INFORMATION);
                     alert.setTitle("Information Message");
